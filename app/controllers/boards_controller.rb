@@ -22,8 +22,8 @@ before_action :set_board,  only:[:show,:edit,:update,:destroy]
   end
 
   def update
-    board.update(board_params)
-    redirect_to board
+    @board.update(board_params)
+    redirect_to @board
   end
 
   def destroy
