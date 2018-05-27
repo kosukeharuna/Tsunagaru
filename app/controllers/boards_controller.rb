@@ -20,9 +20,12 @@ class BoardsController < ApplicationController
   end
 
   def update
-    @board = Board.find(params[:id])
+    board = Board.find(params[:id])
     board.update(board_params)
     redirect_to board
+  end
+
+  def destroy
   end
 
   private
